@@ -1,0 +1,141 @@
+DEBUG: SITE files ['endian-little', 'common-linux', 'common-glibc', 'bit-64', 'x86_64-linux', 'common']
+DEBUG: Executing shell function do_compile
+NOTE: make -j 8
+    [CC]     btrfs.o
+    [CC]     ctree.o
+    [CC]     disk-io.o
+    [CC]     kernel-lib/radix-tree.o
+    [CC]     extent-tree.o
+    [CC]     root-tree.o
+    [CC]     print-tree.o
+    [CC]     dir-item.o
+    [CC]     inode-item.o
+    [CC]     file-item.o
+    [CC]     inode-map.o
+    [CC]     extent-cache.o
+    [CC]     extent_io.o
+    [CC]     utils.o
+    [CC]     volumes.o
+    [CC]     repair.o
+    [CC]     free-space-cache.o
+    [CC]     qgroup.o
+utils.c: In function 'canonicalize_dm_name.part.10':
+utils.c:852:45: warning: '%s' directive output may be truncated writing up to 4095 bytes into a region of size 4084 [-Wformat-truncation=]
+   snprintf(path, sizeof(path), "/dev/mapper/%s", name);
+                                             ^~   ~~~~
+In file included from /home/kogrob/poky/build-toaster-2/tmp/work/core2-64-poky-linux/btrfs-tools/4.17.1-r0/recipe-sysroot/usr/include/stdio.h:873,
+                 from utils.c:20:
+/home/kogrob/poky/build-toaster-2/tmp/work/core2-64-poky-linux/btrfs-tools/4.17.1-r0/recipe-sysroot/usr/include/bits/stdio2.h:67:10: note: '__builtin___snprintf_chk' output between 13 and 4108 bytes into a destination of size 4096
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC]     kernel-lib/list_sort.o
+    [CC]     props.o
+    [CC]     kernel-shared/ulist.o
+    [CC]     qgroup-verify.o
+    [CC]     backref.o
+    [CC]     string-table.o
+    [CC]     task-utils.o
+    [CC]     inode.o
+    [CC]     file.o
+    [CC]     find-root.o
+    [CC]     help.o
+    [CC]     free-space-tree.o
+    [CC]     send-dump.o
+    [CC]     fsfeatures.o
+    [CC]     kernel-lib/tables.o
+    [CC]     kernel-lib/raid56.o
+    [CC]     cmds-subvolume.o
+    [CC]     transaction.o
+    [CC]     cmds-filesystem.o
+    [CC]     cmds-device.o
+    [CC]     cmds-scrub.o
+    [CC]     cmds-inspect.o
+    [CC]     cmds-balance.o
+    [CC]     cmds-receive.o
+    [CC]     cmds-send.o
+    [CC]     cmds-quota.o
+    [CC]     cmds-qgroup.o
+    [CC]     cmds-replace.o
+    [CC]     check/main.o
+    [CC]     cmds-restore.o
+    [CC]     cmds-rescue.o
+    [CC]     chunk-recover.o
+    [CC]     super-recover.o
+    [CC]     cmds-property.o
+    [CC]     cmds-fi-usage.o
+    [CC]     cmds-inspect-dump-tree.o
+    [CC]     cmds-inspect-dump-super.o
+    [CC]     cmds-inspect-tree-stats.o
+    [CC]     cmds-fi-du.o
+    [CC]     mkfs/common.o
+    [CC]     check/mode-common.o
+    [CC]     check/mode-lowmem.o
+    [CC]     send-stream.o
+    [CC]     send-utils.o
+    [CC]     kernel-lib/rbtree.o
+    [CC]     btrfs-list.o
+    [CC]     kernel-lib/crc32c.o
+    [CC]     messages.o
+    [CC]     uuid-tree.o
+    [CC]     rbtree-utils.o
+    [CC]     utils-lib.o
+    [CC]     libbtrfsutil/errors.o
+    [CC]     libbtrfsutil/filesystem.o
+    [CC]     libbtrfsutil/subvolume.o
+    [CC]     libbtrfsutil/qgroup.o
+    [CC]     libbtrfsutil/stubs.o
+    [CC]     mkfs/rootdir.o
+    [CC]     mkfs/main.o
+    [CC]     btrfs-map-logical.o
+    [CC]     image/main.o
+mkfs/main.c: In function 'is_ssd':
+mkfs/main.c:465:45: warning: '%s' directive output may be truncated writing up to 4095 bytes into a region of size 4085 [-Wformat-truncation=]
+  snprintf(sysfs_path, PATH_MAX, "/sys/block/%s/queue/rotational",
+                                             ^~
+    wholedisk);
+    ~~~~~~~~~                                 
+In file included from /home/kogrob/poky/build-toaster-2/tmp/work/core2-64-poky-linux/btrfs-tools/4.17.1-r0/recipe-sysroot/usr/include/stdio.h:873,
+                 from ./kerncompat.h:22,
+                 from mkfs/main.c:19:
+/home/kogrob/poky/build-toaster-2/tmp/work/core2-64-poky-linux/btrfs-tools/4.17.1-r0/recipe-sysroot/usr/include/bits/stdio2.h:67:10: note: '__builtin___snprintf_chk' output between 29 and 4124 bytes into a destination of size 4096
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC]     image/sanitize.o
+    [CC]     btrfs-find-root.o
+    [CC]     btrfstune.o
+    [CC]     btrfs-select-super.o
+    [CC]     convert/main.o
+    [CC]     convert/common.o
+    [CC]     convert/source-fs.o
+    [CC]     convert/source-ext2.o
+    [CC]     convert/source-reiserfs.o
+    [LD]     libbtrfs.so.0.1
+    [CC]     btrfs-corrupt-block.o
+    [LD]     libbtrfsutil.so.1.0.0
+    [LN]     libbtrfs.so.0
+    [LN]     libbtrfs.so
+    [AR]     libbtrfs.a
+    [AR]     libbtrfsutil.a
+    [LN]     libbtrfsutil.so.1
+    [LN]     libbtrfsutil.so
+    [LD]     mkfs.btrfs
+    [LD]     btrfs-map-logical
+    [LD]     btrfs-find-root
+    [LD]     btrfstune
+    [LD]     btrfs-select-super
+    [PY]     libbtrfsutil
+    [LD]     btrfs-image
+Traceback (most recent call last):
+  File "setup.py", line 23, in <module>
+    from setuptools import setup, Extension
+ModuleNotFoundError: No module named 'setuptools'
+Makefile:433: recipe for target 'libbtrfsutil_python' failed
+make: *** [libbtrfsutil_python] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: oe_runmake failed
+WARNING: exit code 1 from a shell command.
+ERROR: Function failed: do_compile (log file is located at /home/kogrob/poky/build-toaster-2/tmp/work/core2-64-poky-linux/btrfs-tools/4.17.1-r0/temp/log.do_compile.26496)
